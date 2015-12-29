@@ -16,6 +16,7 @@ New Terminal:
   ```
   npm install -g gulp
   ```
+  Then:
   ```
   npm install gulp --save-dev
   npm install gulp-autoprefixer --save-dev
