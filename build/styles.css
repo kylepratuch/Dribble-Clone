@@ -18,7 +18,7 @@ ol, ul {
 blockquote:before,
 blockquote:after,
 q:before, q:after {
-  content: '';
+  content: "";
   content: none; }
 
 table {
@@ -27,7 +27,7 @@ table {
 
 body {
   background: #fff;
-  font: 14px "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font: 14px/1.6 "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
@@ -80,8 +80,9 @@ a {
   color: #333;
   text-decoration: underline;
   outline: 0; }
-  a:hover, a:focus {
-    color: #000; }
+
+a:hover, a:focus {
+  color: #000; }
 
 * {
   box-sizing: border-box; }
@@ -100,16 +101,28 @@ header {
   header a {
     color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
-    -webkit-transition: all 300ms;
     transition: all 300ms; }
     header a:hover {
       color: white; }
-    header a .search-form input {
-      border: none;
-      border-radius: 5px;
-      padding: 5px 8px; }
-    header a .avatar {
-      border-raidus: 50%; }
+  header .search-form input {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 8px; }
+  header .avatar {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%; }
+
+.section-nav {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc; }
+  .section-nav a {
+    font-weight: bold;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 0 20px 0 0; }
+    .section-nav a.active, .section-nav a:hover {
+      color: black; }
 
 .shots {
   padding: 20px 0; }
@@ -126,24 +139,54 @@ header {
   .shots .meta {
     color: #888; }
     .shots .meta div:before {
-      content: '';
+      content: "";
       display: inline-block;
+      height: 12px;
+      width: 18px;
       background: pink;
       margin: 0 2px 0 5px;
       position: relative;
       top: 2px; }
-    .shots .meta div.views:before {
-      background: url(https://d13yacurqjgara.cloudfront.net/assets/icon-views-sm-f315b1f67523edc4a3e8b4a5c20a7fa6.png) center top no-repeat; }
-    .shots .meta div.comments:before {
-      background: url(https://d13yacurqjgara.cloudfront.net/assets/icon-comments-4ec91f1ac45527f803cf99e98c896ce6.png) center top no-repeat; }
-    .shots .meta div.likes:before {
-      background: url(https://d13yacurqjgara.cloudfront.net/assets/icon-hearts-79d9278bcac5768da940cd4487c574f6.png?) center top no-repeat; }
-    .shots .meta .owner {
-      margin: 10px; }
-      .shots .meta .owner .avatar {
-        border-radius: 50%;
-        margin-right: 4px;
-        vertical-align: sub; }
-      .shots .meta .owner .name {
-        font-weight: bold;
-        color: #4083a9; }
+  .shots .meta div.views:before {
+    background: url(https://d13yacurqjgara.cloudfront.net/assets/icon-views-sm-f315b1f67523edc4a3e8b4a5c20a7fa6.png) center top no-repeat; }
+  .shots .meta div.comments:before {
+    background: url(https://d13yacurqjgara.cloudfront.net/assets/icon-comments-4ec91f1ac45527f803cf99e98c896ce6.png) center top no-repeat; }
+  .shots .meta div.likes:before {
+    background: url(https://d13yacurqjgara.cloudfront.net/assets/icon-hearts-79d9278bcac5768da940cd4487c574f6.png?) center top no-repeat; }
+  .shots .owner {
+    margin: 10px; }
+    .shots .owner .avatar {
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      margin-right: 4px;
+      vertical-align: sub; }
+    .shots .owner .name {
+      font-weight: bold;
+      color: #4083a9; }
+
+.positioner {
+  max-width: 970px;
+  margin: 0 auto; }
+
+header, header nav, header nav ul, header .user-tools, .shots, .shots .meta {
+  display: flex; }
+
+header {
+  justify-content: space-between; }
+  header nav {
+    align-items: flex-start; }
+    header nav ul li {
+      margin: 0 20px; }
+  header .user-tools {
+    align-items: center; }
+    header .user-tools img {
+      margin: 0 20px; }
+
+.shots {
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .shots .meta {
+    justify-content: flex-end; }
+
+/*# sourceMappingURL=styles.css.map */
