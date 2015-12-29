@@ -12,8 +12,11 @@ Now, tell Sass to watch an input .scss to compile to an output .css:
 
 ## Gulp + Autoprefixer:
 New Terminal:
+  You might have to install gulp globally if you haven't already:
   ```
   npm install -g gulp
+  ```
+  ```
   npm install gulp --save-dev
   npm install gulp-autoprefixer --save-dev
   touch gulpfile.js
