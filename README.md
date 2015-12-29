@@ -8,11 +8,13 @@ Terminal:
   ```
 At this point, you should setup your desired Sass file structure. Mine is just an example.
 Now, tell Sass to watch an input .scss to compile to an output .css:
-`sass --watch scss/styles.scss:css/styles.css`
+```
+sass --watch scss/styles.scss:css/styles.css
+```
 
 ## Gulp + Autoprefixer:
 New Terminal:
-  You might have to install gulp globally if you haven't already:
+  You might have to install gulp globally if you haven't already.
   ```
   npm install -g gulp
   ```
